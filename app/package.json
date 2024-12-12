@@ -1,0 +1,37 @@
+{
+  "name": "electron-app",
+  "version": "1.0.3",
+  "description": "My test electron app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --exec electron .",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/wouterentiustribemusic/ProducerAssistant-autoupdater",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "app.producerassistant.producerassistant",
+    "productName": "Producer Assistant",
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "author": "CoderJeet",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  }
+}
